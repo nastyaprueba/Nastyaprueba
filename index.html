@@ -1,13 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Mi Página</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Galería Estilo Pro</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; text-align: center; }
+        h1 { color: #333; text-transform: uppercase; letter-spacing: 2px; }
+        
+        /* Contenedor de la Galería */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilo de cada tarjeta de foto */
+        .foto-card {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .foto-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Esto hace que todas las fotos midan lo mismo sin deformarse */
+            border-radius: 4px;
+        }
+
+        .nombre-foto { margin-top: 10px; font-weight: bold; color: #555; }
+    </style>
 </head>
-<body style="background-color: #1a1a1a; color: white; text-align: center; font-family: sans-serif; padding-top: 50px;">
-    <h1>¡Lograste subir tu página!</h1>
-    
-    <img src="1639620542826.jpg" style="width: 90%; max-width: 500px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-    
-    <p>La imagen ahora se ve como una página real.</p>
+<body>
+
+    <h1>Galería de Imágenes</h1>
+
+    <div class="galeria">
+        <div class="foto-card">
+            <img src="1639620542826.jpg" alt="Foto 1">
+            <div class="nombre-foto">Imagen Principal</div>
+        </div>
+
+        </div>
+
 </body>
 </html>
