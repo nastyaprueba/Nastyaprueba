@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Galería 3x3</title>
+    <title>Mi Galería con Links</title>
     <style>
-        /* Estilo general */
         body { 
             font-family: 'Segoe UI', sans-serif; 
             margin: 0; 
@@ -16,73 +15,58 @@
             align-items: center;
         }
 
-        h1 { 
-            color: #333; 
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Contenedor de la cuadrícula */
         .grid-container {
             display: grid;
-            /* Crea 3 columnas de igual tamaño */
             grid-template-columns: repeat(3, 1fr); 
-            /* Espacio entre las fotos */
             gap: 15px; 
             max-width: 900px;
             width: 100%;
         }
 
-        /* Estilo de cada cuadro de foto */
         .foto-item {
             background-color: white;
             padding: 8px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            /* Hace que el cuadro sea siempre cuadrado */
             aspect-ratio: 1 / 1; 
             overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .foto-item img {
             width: 100%;
             height: 100%;
-            /* Ajusta la foto para que llene el cuadro sin deformarse */
             object-fit: cover; 
             border-radius: 5px;
             transition: transform 0.3s ease;
+            cursor: pointer; /* Cambia el cursor a una manita */
         }
 
-        /* Efecto al tocar la foto */
         .foto-item img:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
-        /* Ajuste para que en celulares se vea bien (2 columnas) */
         @media (max-width: 600px) {
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .grid-container { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body>
 
-    <h1>Mi Galería de Fotos</h1>
+    <h1>Galería Interactiva</h1>
+    <p>Toca la primera imagen para verla en grande</p>
 
     <div class="grid-container">
+        <div class="foto-item">
+            <a href="1639620542826.jpg" target="_blank">
+                <img src="1639620542826.jpg" alt="Ver en grande">
+            </a>
+        </div>
+
         <div class="foto-item"><img src="1639620542826.jpg"></div>
         <div class="foto-item"><img src="1639620542826.jpg"></div>
         <div class="foto-item"><img src="1639620542826.jpg"></div>
-        
         <div class="foto-item"><img src="1639620542826.jpg"></div>
         <div class="foto-item"><img src="1639620542826.jpg"></div>
-        <div class="foto-item"><img src="1639620542826.jpg"></div>
-        
         <div class="foto-item"><img src="1639620542826.jpg"></div>
         <div class="foto-item"><img src="1639620542826.jpg"></div>
         <div class="foto-item"><img src="1639620542826.jpg"></div>
